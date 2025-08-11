@@ -6,7 +6,6 @@
 <p align="center">
   💼 Web Designer at <strong>SV Medcity, Redhills</strong> <br>
   🎓 B.Sc. Computer Science – Women’s Christian College <br>
-  💜 I code with style and love everything in purple & black
 </p>
 
 ---
