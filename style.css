@@ -332,85 +332,9 @@ body {
     filter: drop-shadow(0 0 30px rgba(255, 142, 245, 0.7));
 }
 
-/* Mobile Hero Section Fix (using px) */
-@media (max-width: 768px) {
-  .hero {
-    padding: 32px 16px;
-  }
-
-  .hero .row {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-img {
-    max-width: 250px; 
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-    line-height: 34px;
-  }
-
-  .hero h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    max-width: 90%;
-    margin: 0 auto 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 24px 16px;
-    text-align: center;
-  }
-
-  .hero .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-img {
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 24px;
-    animation: float 6s ease-in-out infinite;
-    clip-path: ellipse(70% 90% at 50% 50%);
-  }
-
-  .hero h1 {
-    font-size: 26px;
-    line-height: 30px;
-    margin-bottom: 12px;
-  }
-
-  .hero h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .hero p {
-    font-size: 15px;
-    max-width: 90%;
-    margin: 0 auto 20px;
-  }
-}
 
 /* Responsive */
 @media (max-width: 768px) {
-    .skill-tabs {
-        flex-direction: column;
-        align-items: center;
-    }
     .hamburger {
       display: block;
     }
@@ -424,57 +348,7 @@ body {
     .nav-wrapper.show {
       display: block;
     }
-    .navbar-links ul {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      padding-left: 40px;
-      margin-top: 10px;
-    }
-    .header-flex {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 30px;
-    }
-    .project-card {
-      padding: 1.2rem;
-    }
-}
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 32px 16px;
-  }
-
-  .hero .row {
-    flex-direction: row-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-    line-height: 34px;
-  }
-
-  .hero h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    max-width: 90%;
-    margin: 0 auto 24px;
-  }
 }
 
 
