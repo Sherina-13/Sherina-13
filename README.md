@@ -99,5 +99,5 @@ I am currently building my portfolio and expanding my knowledge in frameworks li
 ---
 
 <p align="center" style="color:#8e44ad; font-style: italic; margin-top: 40px;">
-  Designed with ❤️ by <strong>Sherin Princy</strong>
+  Designed with ❤️ by <strong>Sherinaa</strong>
 </p>
