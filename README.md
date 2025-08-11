@@ -1,8 +1,3 @@
-<!-- Banner -->
-<p align="center">
-  <img src="https://i.imgur.com/C8hBL0h.gif" width="800" alt="Purple Coding Banner">
-</p>
-
 <!-- Typing Effect -->
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Sherin+Princy;Web+Designer;Aspiring+Full+Stack+Developer;Purple+%26+Black+Lover;UI%2FUX+Enthusiast" alt="Typing Animation">
