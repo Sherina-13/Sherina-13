@@ -1,7 +1,7 @@
 <!-- Profile Header with typewriter effect -->
 <h1 align="center" style="color:#9b59b6;">Hi there, I'm Sherin Princy 👋</h1>
 <h3 align="center" style="color:#8e44ad;">
-  <a href="#" style="color:#8e44ad; text-decoration:none;">
+  <a href="#" style="color:#8e44ad; text-decoration:none;text-align:center;">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=8e44ad&width=450&lines=Web+Designer;Aspiring+Full+Stack+Developer" alt="Typing animation" />
   </a>
 </h3>
