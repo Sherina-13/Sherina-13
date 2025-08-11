@@ -1,6 +1,6 @@
 <!-- Typing Effect -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Sherin+Princy;Web+Designer;Aspiring+Full+Stack+Developer;Purple+%26+Black+Lover;UI%2FUX+Enthusiast" alt="Typing Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Sherin+Princy;Web+Designer;Aspiring+Full+Stack+Developer;Purple+%26+Black+Lover;" alt="Typing Animation">
 </h1>
 
 <p align="center">
@@ -73,4 +73,4 @@ Currently building my portfolio and expanding my knowledge in **React, Node.js, 
 🌐 **Portfolio:** [sherina-13.github.io/Sherina-13](https://sherina-13.github.io/Sherina-13/)
 
 ---
-💜 _Designed with purple vibes & code love by Sherin_
+💜 _Designed by Sherin_
