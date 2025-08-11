@@ -46,14 +46,6 @@ My current work focuses on creating responsive and user-friendly web interfaces 
 
 ---
 
-## 📊 GitHub Stats
-
-![Sherin's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sherina-13&show_icons=true&theme=tokyonight)  
-[![GitHub Streak](https://streak-stats.demolab.com?user=Sherina-13&theme=tokyonight)](https://git.io/streak-stats)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sherina-13&layout=compact&theme=tokyonight)
-
----
-
 ## 📫 Contact Me
 
 📧 **Email:** [sherinaofficial2025@gmail.com](mailto:sherinaofficial2025@gmail.com)  
