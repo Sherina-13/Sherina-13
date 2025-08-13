@@ -47,7 +47,6 @@ function sendMail() {
     });
 
 
-
   var hamburgerBtn = document.querySelector('#hamburgerBtn');
   var navWrapper = document.querySelector('#navWrapper');
   var iconBars = hamburgerBtn.querySelector('.fa-bars');
