@@ -42,7 +42,7 @@ body {
 
 .hero {
   min-height: 100vh;
-  padding-top: 120px;
+  padding-top: 30px;
   padding-bottom: 60px;
   background: transparent; 
 }
@@ -383,3 +383,4 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
