@@ -1,5 +1,5 @@
 <!-- Profile Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8e44ad&height=200&section=header&text=Sherin%20Princy&fontSize=40&fontColor=ffffff&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8e44ad&height=200&section=header&text=Sherin%20Princy%20N&fontSize=40&fontColor=ffffff&animation=fadeIn" width="100%"/>
 
 <!-- Typing Effect -->
 <p align="center">
