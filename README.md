@@ -82,5 +82,5 @@ I love turning **creative ideas into functional web solutions** while keeping my
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=8e44ad&height=100&section=footer" width="100%"/>
 <p align="center" style="color:#8e44ad; font-style: italic;">
-  Designed with 💜 by <strong>Sherin Princy</strong>
+  Designed with 💜 by <strong>Sherinaa</strong>
 </p>
