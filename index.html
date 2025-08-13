@@ -27,13 +27,6 @@
     <!-- AOS Animation -->
     <link rel="stylesheet" href="libs/aos/aos.css" />
 
-    <!-- WOW Animation -->
-    <link rel="stylesheet" href="libs/wow/animate.css" />
-
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <!-- Font Awesome -->
@@ -86,15 +79,15 @@
 
 
     <!--hero-->
-    <section id="home" class="hero d-flex align-items-center">
+    <section id="home" class="hero d-flex align-items-center ">
         <div class="container">
             <div class="row hero-row align-items-center">
-                <div class="col-12 col-md-6 text-white text-md-start text-sm-center px-3 px-sm-5 order-2 order-md-1 mt-5 ">
+                <div class="col-12 col-md-6 text-white text-md-start px-3 px-sm-5 order-2 order-md-1 mt-5 ">
                     <h1 class="fw-bold display-5 display-md-5">Hi <span class="text-purple">There!</span><i class="fas fa-hand-paper wave ms-2"></i></h1>
                     <h1 class="mt-3">I'm <span class="text-purple">Sherin Princy N </span></h1>
                     <h3 class="mt-3"><span id="typing"></span></h3>
                 </div>
-                <div class="col-12 col-md-6 text-center px-3 px-sm-5 order-1 order-md-2 mb-3">
+                <div class="col-12 col-md-6 text-center px-3 px-sm-5 order-1 order-md-2 mb-sm-3">
                     <img src="img/img2.png" alt="dev girl" class="img-fluid hero-img glow-blend ">
                 </div>
             </div>
@@ -317,18 +310,11 @@
   <!-- AOS -->
   <script src="libs/aos/aos.js"></script>
 
-  <!-- WOW -->
-  <script src="libs/wow/wow.min.js"></script>
-
-  <!-- Owl Carousel -->
-  <script src="libs/owl-carousel/owl.carousel.min.js"></script>
-
   <!-- Custom JS -->
   <script src="script.js"></script>
 
   <script>
     AOS.init();
-    new WOW().init();
   </script>
        
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -341,25 +327,9 @@
   });
 
 
-// ==== Mobile Menu Toggle ====
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const navWrapper = document.getElementById("navWrapper");
-
-if (hamburgerBtn && navWrapper) {
-  hamburgerBtn.addEventListener("click", () => {
-    navWrapper.classList.toggle("active");
-    hamburgerBtn.querySelector(".fa-bars").classList.toggle("d-none");
-    hamburgerBtn.querySelector(".fa-times").classList.toggle("d-none");
-  });
-}
-
-
 
 </script>
 
 
 </body>
 </html>
-
-
-
