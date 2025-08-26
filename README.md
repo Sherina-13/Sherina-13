@@ -40,7 +40,7 @@ I love turning **creative ideas into functional web solutions** while keeping my
 ## 🚀 Career Highlights
 - 💻 Web Designer at **SV Medcity**
 - 💼 Internship at **MNC Corporate System Pvt. Ltd., Guindy**
-- 🎨 Created multiple **UI/UX-focused** academic & personal projects
+- 🎨 Created few **UI/UX-focused** academic & personal projects
 
 ---
 
