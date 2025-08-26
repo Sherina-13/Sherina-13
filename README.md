@@ -44,7 +44,7 @@ I love turning **creative ideas into functional web solutions** while keeping my
 
 ---
 
-## 🎯 Goals
+## 🎯 Future Goals
 - Strengthen **backend** skills in PHP & JavaScript frameworks  
 - Build real-world **MERN stack** applications  
 - Contribute to **open source** projects  
