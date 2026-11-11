@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090612">
+  <title>Sherin Princy N | PHP Developer & Web Application Developer</title>
+  <meta name="description" content="Sherin Princy N — PHP developer building responsive web applications, database-driven platforms and creative digital experiences.">
+  <meta name="author" content="Sherin Princy N">
+  <meta property="og:title" content="Sherin Princy | Developer Portfolio">
+  <meta property="og:description" content="Code with creativity. Build with purpose.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* Premium developer branding */
+    .site-header .brand {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        min-width: max-content;
+        padding: 5px 0;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .site-header .brand-mark {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        position: relative;
+        border: 1px solid rgba(207, 174, 255, 0.72);
+        border-radius: 13px;
+        background: linear-gradient(145deg, rgba(150, 91, 226, 0.28), rgba(28, 17, 46, 0.9));
+        box-shadow: inset 0 0 18px rgba(190, 145, 255, 0.12), 0 0 22px rgba(155, 105, 255, 0.13);
+        color: #f2e5ff;
+        font: 700 18px/1 "Space Grotesk", sans-serif;
+        letter-spacing: -2px;
+        text-shadow: 0 0 15px rgba(205, 166, 255, 0.55);
+        transition: 0.25s ease;
+    }
+
+    .site-header .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border: 1px solid rgba(232, 205, 255, 0.2);
+        border-radius: 9px;
+        pointer-events: none;
+    }
+
+    .site-header .brand-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .site-header .brand-copy strong {
+        color: #ffffff;
+        font: 800 14px/1 "Space Grotesk", sans-serif;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .site-header .brand-copy small {
+        color: #bd9be7;
+        font: 9px/1.2 "DM Mono", monospace;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    /* Logo hover interaction */
+    .site-header .brand:hover .brand-mark {
+        border-color: #e0c0ff;
+        box-shadow: inset 0 0 20px rgba(190, 145, 255, 0.18), 0 0 28px rgba(155, 105, 255, 0.28);
+        transform: translateY(-1px);
+    }
+
+    /* Navigation alignment */
+    .site-header #mainNav {
+        align-items: center;
+        gap: clamp(12px, 1.65vw, 25px);
+    }
+
+    .site-header #mainNav a {
+        white-space: nowrap;
+    }
+
+    /* Header action alignment */
+    .site-header .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .site-header .sound-toggle {
+        white-space: nowrap;
+    }
+
+    /* Tablet responsiveness */
+    @media (max-width: 1050px) {
+        .site-header .brand-mark {
+            width: 43px;
+            height: 43px;
+        }
+
+        .site-header .brand-copy strong {
+            font-size: 12px;
+        }
+
+        .site-header .brand-copy small {
+            font-size: 8px;
+        }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 850px) {
+        .site-header .brand {
+            gap: 10px;
+        }
+
+        .site-header .brand-mark {
+            width: 40px;
+            height: 40px;
+        }
+
+        .site-header .brand-copy strong {
+            font-size: 11px;
+        }
+
+        .site-header .brand-copy small {
+            font-size: 7px;
+            letter-spacing: 0.12em;
+        }
+    }
+
+    /* Small mobile screens */
+    @media (max-width: 420px) {
+        .site-header .brand-copy small {
+            display: none;
+        }
+
+        .site-header .brand-copy strong {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .site-header .brand-mark {
+            width: 37px;
+            height: 37px;
+        }
+    }
+
+    /* Reduced motion accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        .site-header .brand-mark {
+            transition: none;
+        }
+    }
+  </style>  
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="intro cinematic-intro" id="intro"><canvas id="introCanvas"></canvas>
+    <div class="intro-vignette"></div>
+    <div class="intro-core cinematic-core">
+      <div class="intro-avatar-wrap">
+        <div class="intro-portal"><span>SP</span></div><img class="intro-avatar" src="assets/avatar/hero-coding.png" alt="Sherin's illustrated developer avatar">
+      </div>
+      <p class="mono intro-overline">A LITTLE WORLD BUILT WITH CURIOSITY</p>
+      <h1 class="intro-welcome">WELCOME <em>ABOARD.</em></h1>
+      <p class="intro-role"><span id="introTypewriter">I'm Sherin Princy N — PHP Developer & Web Application Developer.</span><i class="type-caret"></i></p>
+      <p class="intro-subline">Where creativity meets code, and every idea becomes an experience.</p><button class="btn-glow" id="enterWorld">EXPLORE MY WORLD <span>↗</span></button><button class="skip-intro" id="skipIntro">Skip welcome</button>
+    </div>
+    <div class="intro-bottom-note">DESIGNED TO BE EXPLORED <span>✦</span></div>
+  </div>
+
+<header class="site-header">
+  <!-- Premium developer brand logo -->
+  <a class="brand" href="#home" aria-label="Sherin Princy N - Back to home">
+      <span class="brand-mark" aria-hidden="true">SP</span>
+
+      <span class="brand-copy">
+          <strong>SHERIN PRINCY N</strong>
+          <small>PHP · WEB APPLICATION DEVELOPER</small>
+      </span>
+  </a>
+
+  <!-- Mobile navigation toggle -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      ☰
+  </button>
+
+  <!-- Main navigation -->
+  <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header action buttons -->
+  <div class="header-actions">
+
+      <!-- Existing ambient sound control -->
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle ambient sound">
+          ♫ <span>Sound off</span>
+      </button>
+
+      <!-- Resume download / view link -->
+      <a class="nav-resume"
+          href="assets/resume/Sherin-Princy-Resume-2026.pdf"
+          target="_blank"
+          rel="noopener">
+          ↓ Resume
+      </a>
+
+  </div>
+
+</header>
+
+  <div class="ambient-avatar" id="ambientAvatar" aria-hidden="true"><img src="assets/avatar/standing.png" alt=""></div>
+  <main>
+    <section class="hero section-shell" id="home"><canvas id="starfield"></canvas>
+      <div class="hero-grid">
+        <div class="hero-copy reveal"><span class="eyebrow"><i></i> HELLO, WORLD. I'M SHERIN PRINCY N.</span>
+          <div class="hero-kicker">CREATIVE THINKING <b>×</b> ENGINEERING MINDSET</div>
+          <h1>Building the web,<br><em>one bold idea</em><br>at a time<span class="orange">.</span></h1>
+          <h2>PHP DEVELOPER <b>|</b> WEB APPLICATION DEVELOPER</h2>
+          <p>I build responsive interfaces, database-driven applications and practical digital systems — bringing frontend craft together with backend logic.</p>
+          <div class="hero-actions"><a class="btn-glow" href="#projects">Explore my work <span>↗</span></a><a class="btn-outline" href="assets/resume/Sherin-Princy-Resume-2026.pdf" target="_blank">View resume ↓</a></div>
+          <div class="hero-social"><a href="https://www.linkedin.com/in/sherinprincy13" target="_blank" rel="noopener">in</a><a href="https://github.com/Sherina-13" target="_blank" rel="noopener">⌘</a><a href="mailto:sherinaofficial2025@gmail.com">✉</a></div>
+          <div class="hero-proof"><span class="live-dot"></span> AVAILABLE FOR MEANINGFUL OPPORTUNITIES</div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-halo"></div>
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <div class="hero-avatar"><img src="assets/avatar/hero-coding.png" alt="Illustrated Sherin Princy coding at her laptop"></div>
+          <div class="floating-chip chip-php"><b>PHP</b><small>Backend logic</small></div>
+          <div class="floating-chip chip-js"><b>JS / AJAX</b><small>Dynamic UI</small></div>
+          <div class="floating-chip chip-db"><b>MySQL</b><small>Data layer</small></div>
+          <div class="floating-chip chip-ui"><b>Bootstrap 5</b><small>Responsive design</small></div>
+          <div class="hero-caption"><span>01 / DIGITAL CREATOR</span><b>Ideas become interfaces.</b></div>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-stat"><strong>1+</strong><span>Year of experience</span></div>
+        <div class="hero-stat"><strong>6+</strong><span>College portals</span></div>
+        <div class="hero-stat"><strong>5</strong><span>Featured projects</span></div>
+        <div class="hero-stat"><strong>∞</strong><span>Curiosity to build</span></div><a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+      </div>
+      <div class="hero-scroll-label">SCROLL TO MOVE THROUGH MY WORLD <span>↓</span></div>
+    </section>
+    <section class="section-shell about-section" id="about" data-pose="standing">
+      <div class="section-kicker">01 / THE HUMAN BEHIND THE CODE</div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="image-frame avatar-frame"><img src="assets/avatar/pointing.png" alt="Sherin illustrated avatar presenting her work"></div>
+          <div class="image-stamp">DESIGN<br>× CODE<br>× PURPOSE</div>
+          <div class="orbit-label">CREATIVE DEVELOPER</div>
+        </div>
+        <div class="about-copy reveal"><span class="eyebrow">A LITTLE ABOUT ME</span>
+          <h2>The mind behind<br>the <em>magic of code.</em></h2>
+          <p>I'm Sherin Princy N, a PHP Developer and Web Application Developer with 1+ year of hands-on experience building responsive websites, dynamic web applications and institutional digital platforms.</p>
+          <p>I work across the development journey — translating interface ideas into frontend experiences, connecting them to PHP and MySQL backends, integrating useful services, debugging and supporting production deployment.</p>
+          <p class="about-note">Currently working at Sri Venkateswaraa Medcity while pursuing my MCA through Anna University – Distance Education.</p>
+          <div class="about-facts">
+            <div><b>01</b><span>Frontend craft</span></div>
+            <div><b>02</b><span>Backend thinking</span></div>
+            <div><b>03</b><span>Continuous learning</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-shell skills-section" id="skills" data-pose="coding">
+      <div class="section-kicker">02 / THE DEVELOPER TOOLKIT</div>
+      <div class="section-heading">
+        <div><span class="eyebrow">THE TECHNOLOGY CORE</span>
+          <h2>From pixels to<br><em>production logic.</em></h2>
+        </div>
+        <p>A practical stack for building useful digital products — from responsive interfaces to data-driven application workflows.</p>
+      </div>
+      <div class="stack-console">
+        <div class="console-top"><span><i></i><i></i><i></i></span><b>SHERIN.DEV / TECH_STACK</b><small>LIVE MODULES</small></div>
+        <div class="stack-grid">
+          <article class="stack-card frontend"><span class="stack-index">01 / INTERFACE</span>
+            <div class="stack-icon">〈/〉</div>
+            <h3>Frontend Engineering</h3>
+            <p>Interfaces that feel clear, responsive and alive.</p>
+            <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript ES6+</span><span>jQuery</span><span>AJAX</span><span>Bootstrap 5</span></div>
+          </article>
+          <article class="stack-card backend"><span class="stack-index">02 / APPLICATION</span>
+            <div class="stack-icon">₱</div>
+            <h3>Backend Development</h3>
+            <p>Application logic, form handling and dynamic workflows.</p>
+            <div class="tech-list"><span>PHP</span><span>Python</span><span>PHP–MySQL Integration</span><span>CRUD</span><span>Authentication</span><span>RBAC</span></div>
+          </article>
+          <article class="stack-card database"><span class="stack-index">03 / DATA</span>
+            <div class="stack-icon">▤</div>
+            <h3>Database Systems</h3>
+            <p>Structured data and reliable application storage.</p>
+            <div class="tech-list"><span>MySQL</span><span>SQL</span><span>phpMyAdmin</span><span>Filtering</span><span>Data workflows</span></div>
+          </article>
+          <article class="stack-card delivery"><span class="stack-index">04 / SHIP & GROW</span>
+            <div class="stack-icon">↗</div>
+            <h3>Tools, Integration & SEO</h3>
+            <p>Connecting services, deployment and discoverability.</p>
+            <div class="tech-list"><span>Git / GitHub</span><span>VS Code</span><span>EmailJS</span><span>Brevo</span><span>cPanel</span><span>Figma</span><span>GA4 / GTM</span><span>Search Console</span><span>Lighthouse</span></div>
+          </article>
+        </div>
+        <div class="console-foot"><span>STATUS: <b>READY TO BUILD</b></span><span>NO CLAIMED PROFICIENCY SCORES · REAL-WORLD TOOLKIT</span></div>
+      </div>
+    </section>
+    <section class="section-shell journey-section" id="journey" data-pose="climbing">
+      <div class="section-kicker">03 / LEVEL UP</div>
+      <div class="section-heading">
+        <div><span class="eyebrow">THE CAREER ROADMAP</span>
+          <h2>Every milestone<br>unlocks a <em>new level.</em></h2>
+        </div>
+        <p>A journey shaped by learning, practical development work and the confidence that comes from building real things.</p>
+      </div>
+      <div class="roadmap">
+        <div class="roadmap-path"></div>
+        <div class="roadmap-avatar"><img src="assets/avatar/walking.png" alt=""></div>
+        <article class="milestone left reveal"><span class="milestone-num">01</span>
+          <div class="platform"><small>LEVEL 01 · 2022–2025</small>
+            <h3>B.Sc. Computer Science</h3>
+            <p>Women's Christian College</p><span class="milestone-icon">✧</span>
+            <div class="level-badge">FOUNDATION UNLOCKED</div>
+          </div>
+        </article>
+        <article class="milestone right reveal"><span class="milestone-num">02</span>
+          <div class="platform"><small>LEVEL 02 · APR–MAY 2024</small>
+            <h3>Web Development Intern</h3>
+            <p>MNC Corporate System India Pvt Ltd</p><span class="milestone-icon">⌘</span>
+            <div class="level-badge">FIRST BUILD SHIPPED</div>
+          </div>
+        </article>
+        <article class="milestone left reveal"><span class="milestone-num">03</span>
+          <div class="platform"><small>LEVEL 03 · 2025–2027</small>
+            <h3>MCA — Pursuing</h3>
+            <p>Anna University · Distance Education</p><span class="milestone-icon">✦</span>
+            <div class="level-badge">KNOWLEDGE EXPANDING</div>
+          </div>
+        </article>
+        <article class="milestone right reveal"><span class="milestone-num">04</span>
+          <div class="platform"><small>LEVEL 04 · MAY 2025–PRESENT</small>
+            <h3>Web Designer / PHP Developer</h3>
+            <p>Sri Venkateswaraa Medcity</p><span class="milestone-icon">〈/〉</span>
+            <div class="level-badge">PRODUCTION EXPERIENCE</div>
+          </div>
+        </article>
+        <div class="journey-finish"><img src="assets/avatar/jumping.png" alt="Sherin avatar celebrating"><span>THE JOURNEY DOESN'T END HERE.</span>
+          <h3>Build. Learn. Improve.<br><em>Repeat.</em></h3>
+        </div>
+      </div>
+    </section>
+    <section class="section-shell experience-section" id="experience" data-pose="pointing">
+      <div class="section-kicker">04 / PROFESSIONAL EXPERIENCE</div><span class="eyebrow">WHERE IDEAS MEET DELIVERY</span>
+      <h2>Real work. Real systems.<br><em>Continuous growth.</em></h2>
+      <div class="experience-list">
+        <article class="experience-item reveal">
+          <div class="exp-date">MAY 2025 — PRESENT</div>
+          <div class="exp-main">
+            <h3>Sri Venkateswaraa Medcity</h3><span>Web Designer · PHP Development · Web Application Development</span>
+            <ul>
+              <li>Develop and maintain PHP/MySQL-based websites and web applications for healthcare, university and institutional projects.</li>
+              <li>Enhance JANS Lead Management System with CRUD, authentication, RBAC, lead tracking, filtering and Easebuzz payment integration.</li>
+              <li>Contribute to the Sri Venkateswaraa University website and six college portals as part of a four-member Web Technology team.</li>
+              <li>Implement database-driven forms, AJAX features, EmailJS and Brevo integrations; handle debugging, cPanel deployment and SEO/performance optimization.</li>
+            </ul>
+            <div class="exp-tags"><span>PHP</span><span>MySQL</span><span>AJAX</span><span>RBAC</span><span>Easebuzz</span><span>SEO</span></div>
+          </div>
+          <div class="exp-mark">01</div>
+        </article>
+        <article class="experience-item reveal">
+          <div class="exp-date">APR 2024 — MAY 2024</div>
+          <div class="exp-main">
+            <h3>MNC Corporate System India Pvt Ltd</h3><span>Web Development Intern</span>
+            <ul>
+              <li>Developed responsive web pages using HTML5, CSS3, JavaScript and Bootstrap.</li>
+              <li>Implemented interactive frontend functionality using JavaScript and DOM manipulation.</li>
+              <li>Resolved UI issues and supported debugging and cross-browser compatibility.</li>
+            </ul>
+            <div class="exp-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
+          </div>
+          <div class="exp-mark">02</div>
+        </article>
+      </div>
+    </section>
+    <section class="section-shell projects-section" id="projects" data-pose="coding">
+      <style>
+        /* PROJECT GALLERY — styles intentionally scoped to #projects only */
+        #projects.projects-section {
+          position: relative;
+          isolation: isolate;
+          padding-top: clamp(72px, 9vw, 130px);
+          padding-bottom: clamp(75px, 9vw, 130px);
+          overflow: hidden
+        }
+
+        #projects .sp-project-glow {
+          position: absolute;
+          z-index: -1;
+          width: 480px;
+          height: 480px;
+          right: -170px;
+          top: 120px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(155, 105, 255, .15), transparent 68%);
+          pointer-events: none
+        }
+
+        #projects .sp-project-heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 35px;
+          margin: 20px 0 34px
+        }
+
+        #projects .sp-project-heading h2 {
+          margin: 0;
+          font-family: "Space Grotesk", sans-serif;
+          font-size: clamp(2.5rem, 5.5vw, 5rem);
+          line-height: 1.02;
+          font-weight: 700;
+          letter-spacing: -.055em
+        }
+
+        #projects .sp-project-heading h2 em {
+          font-style: normal;
+          color: #bd91ff
+        }
+
+        #projects .sp-project-heading>p {
+          max-width: 370px;
+          margin: 0 0 5px;
+          color: #bcb5ca;
+          font-size: 14px;
+          line-height: 1.8
+        }
+
+        #projects .sp-project-controls {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          margin: 0 0 25px
+        }
+
+        #projects .sp-project-count {
+          font: 11px "DM Mono", monospace;
+          letter-spacing: .12em;
+          color: #a99db9;
+          text-transform: uppercase
+        }
+
+        #projects .sp-filter-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px
+        }
+
+        #projects .sp-filter {
+          border: 1px solid rgba(194, 165, 255, .24);
+          border-radius: 99px;
+          padding: 9px 15px;
+          background: rgba(255, 255, 255, .035);
+          color: #c8bfd5;
+          font: 11px "DM Mono", monospace;
+          letter-spacing: .04em;
+          cursor: pointer;
+          transition: background .2s, border-color .2s, color .2s, transform .2s
+        }
+
+        #projects .sp-filter:hover {
+          transform: translateY(-2px);
+          border-color: #bd91ff
+        }
+
+        #projects .sp-filter.is-active {
+          background: linear-gradient(110deg, #8c55e8, #c18cff);
+          border-color: transparent;
+          color: #120b20;
+          box-shadow: 0 6px 22px rgba(155, 105, 255, .2)
+        }
+
+        #projects .sp-project-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px
+        }
+
+        #projects .sp-project-card {
+          min-width: 0;
+          overflow: hidden;
+          border: 1px solid rgba(194, 165, 255, .17);
+          border-radius: 19px;
+          background: linear-gradient(145deg, rgba(34, 25, 52, .96), rgba(17, 13, 29, .97));
+          box-shadow: 0 15px 45px rgba(0, 0, 0, .18);
+          transform-style: preserve-3d;
+          transition: transform .22s ease, border-color .25s ease, box-shadow .25s ease;
+          animation: spProjectRise .65s both;
+          animation-delay: calc(var(--card-index)*55ms)
+        }
+
+        #projects .sp-project-card:hover {
+          border-color: rgba(190, 145, 255, .65);
+          box-shadow: 0 25px 55px rgba(0, 0, 0, .34), 0 0 28px rgba(160, 105, 255, .09)
+        }
+
+        #projects .sp-project-card[hidden] {
+          display: none
+        }
+
+        #projects .sp-project-shot {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          aspect-ratio: 16/9;
+          background: #171020;
+          isolation: isolate
+        }
+
+        #projects .sp-project-shot img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: top center;
+          transition: transform .65s cubic-bezier(.2, .7, .2, 1), filter .4s
+        }
+
+        #projects .sp-project-card:hover .sp-project-shot img {
+          transform: scale(1.075);
+          filter: saturate(1.08)
+        }
+
+        #projects .sp-shot-shade {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, rgba(7, 5, 14, .56), transparent 38%, rgba(7, 5, 14, .7));
+          opacity: .65;
+          transition: opacity .3s
+        }
+
+        #projects .sp-project-card:hover .sp-shot-shade {
+          opacity: 1
+        }
+
+        #projects .sp-shot-top {
+          position: absolute;
+          left: 12px;
+          right: 12px;
+          top: 12px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 8px 10px;
+          border: 1px solid rgba(255, 255, 255, .15);
+          border-radius: 8px;
+          background: rgba(10, 8, 18, .67);
+          backdrop-filter: blur(12px);
+          color: #eee;
+          font: 9px "DM Mono", monospace
+        }
+
+        #projects .sp-shot-top i {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #ff7d85
+        }
+
+        #projects .sp-shot-top i:nth-child(2) {
+          background: #ffc56e
+        }
+
+        #projects .sp-shot-top i:nth-child(3) {
+          background: #78dca2
+        }
+
+        #projects .sp-shot-top b {
+          margin-left: 7px;
+          font-weight: 400;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap
+        }
+
+        #projects .sp-shot-cta {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          white-space: nowrap;
+          padding: 12px 17px;
+          border: 1px solid rgba(255, 255, 255, .32);
+          border-radius: 99px;
+          background: rgba(18, 11, 29, .78);
+          backdrop-filter: blur(12px);
+          color: #fff;
+          font: 10px "DM Mono", monospace;
+          letter-spacing: .1em;
+          opacity: 0;
+          transform: translate(-50%, -35%);
+          transition: opacity .3s, transform .3s
+        }
+
+        #projects .sp-project-card:hover .sp-shot-cta,
+        #projects .sp-project-shot:focus-visible .sp-shot-cta {
+          opacity: 1;
+          transform: translate(-50%, -50%)
+        }
+
+        #projects .sp-shot-cta b {
+          color: #d2adff;
+          font-size: 16px
+        }
+
+        #projects .sp-shot-index {
+          position: absolute;
+          right: 14px;
+          bottom: 12px;
+          color: #fff;
+          font: 10px "DM Mono", monospace;
+          letter-spacing: .12em
+        }
+
+        #projects .sp-project-details {
+          padding: 19px 19px 17px;
+          transform: translateZ(18px)
+        }
+
+        #projects .sp-project-label {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #c49aff;
+          font: 10px "DM Mono", monospace;
+          letter-spacing: .13em;
+          text-transform: uppercase
+        }
+
+        #projects .sp-project-dot {
+          color: #f5a86c
+        }
+
+        #projects .sp-project-details h3 {
+          margin: 10px 0 8px;
+          color: #fff;
+          font: 700 19px/1.25 "Space Grotesk", sans-serif;
+          letter-spacing: -.025em
+        }
+
+        #projects .sp-project-details p {
+          min-height: 58px;
+          margin: 0 0 14px;
+          color: #b9b1c8;
+          font-size: 12px;
+          line-height: 1.7
+        }
+
+        #projects .sp-project-stack {
+          min-height: 34px;
+          color: #a99bbd;
+          font: 10px/1.7 "DM Mono", monospace
+        }
+
+        #projects .sp-project-visit {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 14px;
+          padding-top: 13px;
+          border-top: 1px solid rgba(255, 255, 255, .1);
+          color: #e0caff;
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: 700;
+          transition: color .2s
+        }
+
+        #projects .sp-project-visit:hover {
+          color: #fff
+        }
+
+        #projects .sp-project-visit span {
+          font-size: 17px
+        }
+
+        #projects .sp-project-footnote {
+          margin: 25px auto 0;
+          max-width: 850px;
+          text-align: center;
+          color: #91889f;
+          font-size: 11px;
+          line-height: 1.7
+        }
+
+        @keyframes spProjectRise {
+          from {
+            opacity: 0;
+            transform: translateY(24px)
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0)
+          }
+        }
+
+        @media(max-width:1050px) {
+          #projects .sp-project-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+          }
+        }
+
+        @media(max-width:650px) {
+          #projects .sp-project-heading {
+            display: block;
+            margin-bottom: 25px
+          }
+
+          #projects .sp-project-heading>p {
+            margin-top: 17px
+          }
+
+          #projects .sp-project-controls {
+            align-items: flex-start;
+            flex-direction: column
+          }
+
+          #projects .sp-project-grid {
+            grid-template-columns: 1fr;
+            gap: 18px
+          }
+
+          #projects .sp-project-details p {
+            min-height: 0
+          }
+
+          #projects .sp-project-details {
+            padding: 17px
+          }
+
+          #projects .sp-shot-cta {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            font-size: 9px
+          }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+          #projects .sp-project-card {
+            animation: none;
+            transition: none
+          }
+
+          #projects .sp-project-shot img {
+            transition: none
+          }
+        }
+      </style>
+      <div class="sp-project-glow" aria-hidden="true"></div>
+      <div class="section-kicker">05 / SELECTED BUILDS</div>
+      <div class="sp-project-heading">
+        <div><span class="eyebrow">PROJECT ARCHIVE · 13 BUILDS</span>
+          <h2>Digital experiences<br>made <em>useful.</em></h2>
+        </div>
+        <p>Websites and web applications I have contributed to across healthcare, higher education and internal business workflows. Explore each screenshot to visit its live project.</p>
+      </div>
+      <div class="sp-project-controls"><span class="sp-project-count">13 PROJECTS · SELECTED WORK</span>
+        <div class="sp-filter-list" role="group" aria-label="Filter projects"><button class="sp-filter is-active" type="button" data-filter="all" aria-pressed="true">All work</button><button class="sp-filter" type="button" data-filter="healthcare" aria-pressed="false">Healthcare</button><button class="sp-filter" type="button" data-filter="education" aria-pressed="false">Education</button><button class="sp-filter" type="button" data-filter="application" aria-pressed="false">Applications</button><button class="sp-filter" type="button" data-filter="portal" aria-pressed="false">Portals</button></div>
+      </div>
+      <div class="sp-project-grid">
+        <article class="sp-project-card" data-category="application" style="--card-index:1"><a class="sp-project-shot" href="https://jans.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit JANS Admission Management"><img src="assets/images/projects/project-01.png" alt="Website screenshot: JANS Admission Management" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>jans.svuniversity.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">01 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Application</span><span class="sp-project-dot">✦</span></div>
+            <h3>JANS Admission Management</h3>
+            <p>Admission lead dashboard and application workflow for authorized users.</p>
+            <div class="sp-project-stack">PHP · MySQL · AJAX · RBAC</div><a class="sp-project-visit" href="https://jans.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="application" style="--card-index:2"><a class="sp-project-shot" href="https://leads.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit SV Leads"><img src="assets/images/projects/project-02.png" alt="Website screenshot: SV Leads" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>leads.svuniversity.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">02 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Application</span><span class="sp-project-dot">✦</span></div>
+            <h3>SV Leads</h3>
+            <p>Lead-management portal with secure login for authorized team members.</p>
+            <div class="sp-project-stack">PHP · MySQL · Authentication</div><a class="sp-project-visit" href="https://leads.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:3"><a class="sp-project-shot" href="https://svuniversity.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sri Venkateswaraa University"><img src="assets/images/projects/project-03.png" alt="Website screenshot: Sri Venkateswaraa University" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svuniversity.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">03 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>Sri Venkateswaraa University</h3>
+            <p>University website presenting academics, admissions, colleges and institutional information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:4"><a class="sp-project-shot" href="https://svnursing.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit College of Nursing"><img src="assets/images/projects/project-04.png" alt="Website screenshot: College of Nursing" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svnursing.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">04 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>College of Nursing</h3>
+            <p>College website for nursing programmes, academics and campus information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svnursing.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:5"><a class="sp-project-shot" href="https://svahs.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit College of Allied Health Sciences"><img src="assets/images/projects/project-05.png" alt="Website screenshot: College of Allied Health Sciences" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svahs.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">05 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>College of Allied Health Sciences</h3>
+            <p>Academic portal showcasing allied-health programmes and student opportunities.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svahs.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:6"><a class="sp-project-shot" href="https://svphysio.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit College of Physiotherapy"><img src="assets/images/projects/project-06.png" alt="Website screenshot: College of Physiotherapy" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svphysio.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">06 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>College of Physiotherapy</h3>
+            <p>Responsive college website featuring physiotherapy education and admissions.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svphysio.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:7"><a class="sp-project-shot" href="https://svpharma.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit College of Pharmacy"><img src="assets/images/projects/project-07.png" alt="Website screenshot: College of Pharmacy" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svpharma.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">07 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>College of Pharmacy</h3>
+            <p>Pharmacy college website with programme, academic and admission information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svpharma.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="healthcare" style="--card-index:8"><a class="sp-project-shot" href="https://svmch.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Medical College Hospital & Research Institute"><img src="assets/images/projects/project-08.png" alt="Website screenshot: Medical College Hospital & Research Institute" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svmch.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">08 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Healthcare</span><span class="sp-project-dot">✦</span></div>
+            <h3>Medical College Hospital & Research Institute</h3>
+            <p>Medical college website presenting healthcare education and institutional information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://svmch.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="healthcare" style="--card-index:9"><a class="sp-project-shot" href="https://svmedcity.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sri Venkateswaraa Medcity"><img src="assets/images/projects/project-09.png" alt="Website screenshot: Sri Venkateswaraa Medcity" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svmedcity.com/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">09 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Healthcare</span><span class="sp-project-dot">✦</span></div>
+            <h3>Sri Venkateswaraa Medcity</h3>
+            <p>Hospital website for services, departments and patient-facing information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · AJAX</div><a class="sp-project-visit" href="https://svmedcity.com/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="healthcare" style="--card-index:10"><a class="sp-project-shot" href="https://thavamfertility.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Thavam Fertility Center"><img src="assets/images/projects/project-10.png" alt="Website screenshot: Thavam Fertility Center" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>thavamfertility.com/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">10 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Healthcare</span><span class="sp-project-dot">✦</span></div>
+            <h3>Thavam Fertility Center</h3>
+            <p>Fertility-care website focused on treatment information and patient support.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · Bootstrap</div><a class="sp-project-visit" href="https://thavamfertility.com/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="portal" style="--card-index:11"><a class="sp-project-shot" href="https://convocation.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit University Convocation 2026"><img src="assets/images/projects/project-11.png" alt="Website screenshot: University Convocation 2026" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>convocation.svuniversity.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">11 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Portal</span><span class="sp-project-dot">✦</span></div>
+            <h3>University Convocation 2026</h3>
+            <p>Convocation portal with candidate instructions and admit-card information.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript</div><a class="sp-project-visit" href="https://convocation.svuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="education" style="--card-index:12"><a class="sp-project-shot" href="https://svmanagement.ac.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit College of Management Studies"><img src="assets/images/projects/project-12.png" alt="Website screenshot: College of Management Studies" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>svmanagement.ac.in/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">12 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Education</span><span class="sp-project-dot">✦</span></div>
+            <h3>College of Management Studies</h3>
+            <p>Management studies college website and maintenance experience.</p>
+            <div class="sp-project-stack">PHP · HTML · CSS · JavaScript</div><a class="sp-project-visit" href="https://svmanagement.ac.in/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+        <article class="sp-project-card" data-category="application" style="--card-index:13"><a class="sp-project-shot" href="https://medcare.svmedcity.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Medcare Patient Tracking"><img src="assets/images/projects/project-13.png" alt="Website screenshot: Medcare Patient Tracking" loading="lazy"><span class="sp-shot-shade"></span><span class="sp-shot-top"><i></i><i></i><i></i><b>medcare.svmedcity.com/</b></span><span class="sp-shot-cta">EXPLORE PROJECT <b>↗</b></span><span class="sp-shot-index">13 / 13</span></a>
+          <div class="sp-project-details">
+            <div class="sp-project-label"><span>Application</span><span class="sp-project-dot">✦</span></div>
+            <h3>Medcare Patient Tracking</h3>
+            <p>Patient lead conversion and tracking dashboard for authorized users.</p>
+            <div class="sp-project-stack">PHP · MySQL · JavaScript · AJAX</div><a class="sp-project-visit" href="https://medcare.svmedcity.com/" target="_blank" rel="noopener noreferrer">Visit live project <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="sp-project-footnote">Some internal applications may require authorized login credentials. Project work was completed collaboratively; individual responsibilities varied by project. Screenshots are provided as portfolio previews.</p>
+      <script>
+        (function() {
+          const section = document.getElementById('projects');
+          if (!section || section.dataset.galleryReady === 'true') return;
+          section.dataset.galleryReady = 'true';
+          const filters = section.querySelectorAll('.sp-filter');
+          const cards = section.querySelectorAll('.sp-project-card');
+          filters.forEach(function(button) {
+            button.addEventListener('click', function() {
+              const selected = button.dataset.filter;
+              filters.forEach(function(item) {
+                const active = item === button;
+                item.classList.toggle('is-active', active);
+                item.setAttribute('aria-pressed', String(active));
+              });
+              cards.forEach(function(card) {
+                const category = card.dataset.category;
+                card.hidden = !(selected === 'all' || category === selected || (selected === 'portal' && category === 'application' && card.querySelector('a[href*="convocation"]')));
+              });
+            });
+          });
+          if (!window.matchMedia('(pointer:fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          cards.forEach(function(card) {
+            card.addEventListener('pointermove', function(event) {
+              const rect = card.getBoundingClientRect();
+              const x = (event.clientX - rect.left) / rect.width;
+              const y = (event.clientY - rect.top) / rect.height;
+              const rx = (.5 - y) * 5,
+                ry = (x - .5) * 7;
+              card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-3px)';
+            });
+            card.addEventListener('pointerleave', function() {
+              card.style.transform = '';
+            });
+          });
+        })();
+      </script>
+    </section>
+    <section class="section-shell education-section" id="education" data-pose="relaxing">
+      <div class="section-kicker">06 / LEARNING NEVER STOPS</div><span class="eyebrow">EDUCATION & CONTINUOUS LEARNING</span>
+      <h2>Curiosity is a<br><em>career advantage.</em></h2>
+      <div class="education-grid">
+        <div class="edu-card"><span>2025 — 2027</span>
+          <h3>Master of Computer Applications</h3>
+          <p>Anna University — Distance Education</p><b>PURSUING</b>
+        </div>
+        <div class="edu-card"><span>2022 — 2025</span>
+          <h3>B.Sc. Computer Science</h3>
+          <p>Women's Christian College</p><b>COMPLETED</b>
+        </div>
+      </div>
+      <div class="course-cloud"><span>Campus to Corporate · L&T</span><span>Full Stack Master Class · Novi Tech</span><span>JavaScript · Infosys Springboard</span><span>Data Analytics with Python · MyCaptain</span><span>Python Programming · MyCaptain</span></div>
+    </section>
+    <section class="section-shell playground-section" id="playground" data-pose="jumping">
+      <div class="section-kicker">07 / INTERACTIVE PLAYGROUND</div>
+      <div class="playground-head">
+        <div><span class="eyebrow">THE DEVELOPER ARCADE</span>
+          <h2>Think like a dev.<br><em>Play like a pro.</em></h2>
+          <p>Take a break and try a few tiny challenges built around code, logic and curiosity.</p>
+        </div><img class="arcade-avatar" src="assets/avatar/relaxing.png" alt="Sherin avatar relaxing">
+      </div>
+      <div class="arcade-stats" id="arcadeStats" aria-live="polite">
+        <div><b id="totalPlays">0</b><span>TOTAL PLAYS</span></div>
+        <div><b id="catchPlays">0</b><span>CODE CATCHER</span></div>
+        <div><b id="debugPlays">0</b><span>DEBUG LAB</span></div>
+        <div><b id="stackPlays">0</b><span>STACK BUILDER</span></div>
+        <div><b id="bugPlays">0</b><span>QUERY ARCHITECT</span></div>
+      </div>
+      <div class="game-tabs"><button class="game-tab active" data-game="catch">01 · Code Catcher</button><button class="game-tab" data-game="debug">02 · Debug the Code</button><button class="game-tab" data-game="stack">03 · Build the Stack</button><button class="game-tab" data-game="bug">04 · Query Architect</button></div>
+      <div class="game-panel" id="gamePanel">
+        <div class="game-intro">
+          <div class="game-icon">⌁</div>
+          <div>
+            <h3>Code Catcher</h3>
+            <p>Catch the good code, dodge the bugs. Use ← → or A / D.</p>
+          </div><button class="btn-glow" id="startCatch">START GAME ↗</button>
+        </div><canvas id="catchCanvas" width="850" height="330"></canvas>
+        <div class="game-hud"><span>Score <b id="catchScore">0</b></span><span>Time <b id="catchTime">30</b>s</span><span>Best <b id="catchBest">0</b></span><button id="pauseCatch">Ⅱ Pause</button></div>
+        <div class="touch-controls"><button id="moveLeft">←</button><button id="moveRight">→</button></div>
+      </div>
+    </section>
+    <section class="section-shell contact-section" id="contact" data-pose="pointing">
+      <div class="section-kicker">08 / LET'S BUILD SOMETHING</div>
+      <div class="contact-grid">
+        <div class="contact-copy"><span class="eyebrow">YOUR NEXT IDEA STARTS HERE</span>
+          <h2>Have a challenge?<br>Let's <em>talk code.</em></h2>
+          <p>For opportunities, collaborations, project enquiries or just a good conversation about building for the web — send me a message.</p>
+          <div class="contact-links"><a href="mailto:sherinaofficial2025@gmail.com"><span>✉</span>
+              <div><small>EMAIL</small><b>sherinaofficial2025@gmail.com</b></div>
+            </a><a href="https://wa.me/918248003914" target="_blank" rel="noopener"><span>◉</span>
+              <div><small>WHATSAPP</small><b>+91 82480 03914</b></div>
+            </a><a href="https://www.linkedin.com/in/sherinprincy13" target="_blank" rel="noopener"><span>in</span>
+              <div><small>LINKEDIN</small><b>Connect professionally</b></div>
+            </a></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-top"><span>NEW MESSAGE / 001</span><b>Let's connect <i>✦</i></b></div><label>Your name<input name="name" required minlength="2" placeholder="How should I call you?"></label><label>Email address<input type="email" name="email" required placeholder="you@example.com"></label><label>Subject<input name="subject" required minlength="2" placeholder="Project / opportunity / hello"></label><label>Message<textarea name="message" required minlength="10" rows="5" placeholder="Tell me a little about what you have in mind..."></textarea></label><button class="btn-glow" type="submit">SEND MESSAGE <span>↗</span></button>
+          <p id="formNote" class="form-note">Messages are sent securely through EmailJS. Your email address is used only to reply to you.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-brand"><b>SP</b><span>SHERIN PRINCY N</span></div>
+    <p>Designed with curiosity. Built with code.</p><a href="#home">BACK TO TOP ↑</a><small>© <span id="year"></span> SHERIN PRINCY N</small>
+  </footer><button class="chat-launch" id="chatLaunch" aria-label="Open Sherin assistant"><span>✦</span><b>Ask about me</b></button>
+  <aside class="chatbot" id="chatbot" aria-label="Sherin portfolio assistant">
+    <div class="chat-head">
+      <div><span class="chat-live"></span><b>Sherin's Assistant</b><small>Portfolio guide · JavaScript</small></div><button id="chatClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="bot-message">Hi! 👋 I'm Sherin's portfolio assistant. Ask me about her PHP work, projects, skills, education or how to contact her.</div>
+      <div class="quick-questions"><button data-question="What does Sherin do?">What does she do?</button><button data-question="Tell me about her projects">Her projects</button><button data-question="What are her technical skills?">Tech stack</button></div>
+    </div>
+    <form id="chatForm" class="chat-compose"><input id="chatInput" autocomplete="off" placeholder="Ask me something..." aria-label="Ask a question"><button aria-label="Send message">➤</button></form>
+  </aside>
+  <div class="music-hint" id="musicHint">♫ Ambient mode is ready — tap Sound to begin</div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/emailjs-config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="assets/js/games.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
